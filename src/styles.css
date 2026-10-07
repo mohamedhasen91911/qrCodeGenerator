@@ -1,3 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import '@angular/material/prebuilt-themes/azure-blue.css';
 @import 'tailwindcss';
+
+@theme {
+  --color-ink: #0b0b0c;
+  --color-panel: #141416;
+  --color-line: #3a3a40;
+  --color-champagne: #c6a15b;
+  --color-mist: #f4f1ea;
+}
+
+html {
+  color-scheme: dark;
+  --mat-sys-background: #0b0b0c;
+  --mat-sys-on-background: #f4f1ea;
+  --mat-sys-surface: #0b0b0c;
+  --mat-sys-on-surface: #f4f1ea;
+  --mat-sys-on-surface-variant: #c8c2b4;
+  --mat-sys-primary: #c6a15b;
+  --mat-sys-on-primary: #0b0b0c;
+  --mat-sys-outline: #3a3a40;
+  --mat-sys-outline-variant: #2a2a2e;
+  --mat-sys-surface-container: #141416;
+  --mat-sys-surface-container-low: #141416;
+  --mat-sys-surface-container-high: #1c1c1f;
+  --mat-form-field-outlined-outline-color: #3a3a40;
+  --mat-form-field-outlined-hover-outline-color: #c6a15b;
+  --mat-form-field-outlined-focus-outline-color: #c6a15b;
+  --mat-form-field-outlined-label-text-color: #c8c2b4;
+  --mat-form-field-outlined-hover-label-text-color: #f4f1ea;
+  --mat-form-field-outlined-focus-label-text-color: #c6a15b;
+  --mat-form-field-outlined-input-text-color: #f4f1ea;
+  --mat-form-field-outlined-input-text-placeholder-color: #8a8478;
+  --mat-form-field-outlined-caret-color: #c6a15b;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #0b0b0c;
+  color: #f4f1ea;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mat-mdc-form-field .mdc-notched-outline__notch {
+  border-right-style: hidden;
+}
+
+input[type='url'],
+input[type='text'],
+input[type='email'],
+textarea,
+select {
+  border: none;
+  padding: 0;
+}
