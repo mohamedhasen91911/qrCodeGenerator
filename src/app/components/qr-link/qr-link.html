@@ -1,0 +1,38 @@
+<section class="flex min-h-screen flex-col items-center justify-center bg-ink px-6 py-12 text-mist">
+  <div class="flex w-full max-w-md flex-col items-center gap-8">
+    <div
+      class="flex size-72 items-center justify-center rounded-2xl border border-champagne/40 bg-white p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+    >
+      @if (link()) {
+        <qrcode
+          [qrdata]="link()"
+          [width]="240"
+          [margin]="1"
+          errorCorrectionLevel="M"
+          elementType="img"
+          cssClass="block"
+          alt="QR code for the entered link"
+          title="QR code"
+        />
+      } @else {
+        <p class="px-6 text-center text-sm tracking-wide text-stone-500">
+          Your QR code will appear here
+        </p>
+      }
+    </div>
+
+    <form class="w-full" (submit)="$event.preventDefault()">
+      <mat-form-field class="w-full" appearance="outline" subscriptSizing="dynamic">
+        <mat-label>Link</mat-label>
+        <input
+          #linkInput
+          matInput
+          type="url"
+          placeholder="https://"
+          [value]="link()"
+          (input)="updateLink(linkInput.value)"
+        />
+      </mat-form-field>
+    </form>
+  </div>
+</section>
